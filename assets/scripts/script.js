@@ -313,6 +313,7 @@ $('.schedule-button').on('click', function () {
     allEventsArray[location] = event;
   } else {
     //  if no match, then add the current event to the array
+    allEventsArray = allEventsArray || [];
     allEventsArray.push(event);
   }
 
