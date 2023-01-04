@@ -1,0 +1,496 @@
+/* Very creative names for our :root variables */
+
+:root {
+    --color1: #667eea;
+    --color2: #6B8DD6;
+    --color3: #764ba2;
+    --color3RGBA: rgba(116, 79, 168, 0.75);
+    --color4: #8E37D7;
+    --orange: #ffad00;
+    --darkPurple: #8303ab;
+    --opGradient: linear-gradient(to bottom right, #8303ab, #ffad00);
+    --less_transparent_background: rgba(46, 55, 69, .97);
+    --off_white: #dcfbfa;
+}
+
+
+/* Sets the outside container to have no top margin (fixes the awkawrd banner image) */
+
+.container {
+    margin: 0 2%;
+}
+
+
+/* The following goes over the main functions of the website in the banner and navbar up to line 125 */
+
+.aboutTitle {
+    position: relative;
+    left: 15%;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    display: inline;
+    float: left;
+    position: relative;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5p;
+    list-style-type: none;
+}
+
+header ul li a {
+    display: inline-block;
+    padding: 14px 16px;
+    color: white;
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+
+/* Skeleton had an issue with getting their row to be all the same height so I hard coded it */
+
+.navigation {
+    display: flex;
+    justify-content: end;
+    height: 57.7px !important;
+}
+
+.three,
+.nine {
+    margin-bottom: 0;
+}
+
+#logo {
+    height: 50px;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aLogo {
+    padding: 0;
+}
+
+.navBar {
+    margin: 0 5% 0 5%;
+    height: auto;
+}
+
+.navContainer {
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+.nav a:hover {
+    color: var(--color4)
+}
+
+@media screen and (max-width:550px) {
+    .phone_nav {
+        display: flex;
+    }
+    .nav {
+        display: none;
+    }
+    .three {
+        max-width: 25% !important;
+    }
+    .nine {
+        max-width: 75% !important;
+    }
+    .about {
+        margin: 2% 5% 0 5%;
+    }
+}
+
+
+/* Hides the overlay while nav bar is present */
+
+@media screen and (min-width:550px) {
+    .fa {
+        opacity: 0;
+        visibility: hidden;
+    }
+    #liClick {
+        display: none;
+    }
+}
+
+
+/* The css for the phone navbar function up to line 222 */
+
+.phone_nav {
+    justify-content: flex-end;
+}
+
+.fa {
+    background-color: transparent;
+    color: var(--blue);
+    position: relative;
+    right: 2%;
+    opacity: 1;
+}
+
+
+/* The wrapper of the navbar */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    background-color: var(--less_transparent_background);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+
+/* The container of the mobile navbar */
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    background-color: transparent;
+    display: block;
+    justify-content: start;
+    align-items: center;
+}
+
+
+/* Sets parameters for the links in mobile overlay */
+
+.overlay a {
+    margin-top: 15px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--off_white);
+    display: block;
+    transition: 0.3s;
+    background-color: transparent;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.ov {
+    width: 100%;
+}
+
+
+/* Overlay hover functions */
+
+.overlay a:hover,
+.overlay a:focus,
+.ov:hover {
+    color: var(--color4);
+}
+
+
+/* Overlay + close overlay */
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    background-color: transparent;
+}
+
+
+/* Media screen for mobile navbar */
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+/* Functions for the tabs and the buttons up to line 419*/
+
+.tabs,
+.tabs::after,
+.tabs:active {
+    background-image: linear-gradient(to bottom right, #8303ab, #ffad00);
+    color: white;
+}
+
+.title {
+    font-family: 'noto-serif', 'serif';
+}
+
+
+/* Had issues getting the button to be white so I made sure that it would be white */
+
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button {
+    color: white;
+}
+
+.tabsList li a:active {
+    color: white;
+}
+
+h1,
+h4 {
+    text-align: center;
+}
+
+button,
+.button {
+    color: white;
+}
+
+.add-event:hover {
+    color: white;
+    border-color: white;
+}
+
+.bannerImage {
+    max-height: fit-content;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 2%;
+    z-index: 1;
+    color: white;
+}
+
+.btn {
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.btn button {
+    margin-bottom: 3%;
+}
+
+#section-calendar {
+    display: flex;
+    justify-content: center;
+}
+
+.upcoming-main-box {
+    /* border-style: solid;
+    border-width: 4px; */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.upcoming-one,
+.upcoming-two,
+.upcoming-three,
+.upcoming-four {
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgrey;
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px
+}
+
+.event-modal {
+    border: 5px solid black;
+    background-color: white;
+    max-width: 250px;
+    min-width: 200px;
+    padding: 15px;
+    /* position:absolute;
+    top: 50px;
+    left: 40%; */
+    z-index: 4;
+}
+
+.event-box {
+    padding: 10px;
+    border-bottom: 3px solid black;
+}
+
+.gift-box {
+    padding: 10px;
+}
+
+.edit-event-modal {
+    border: 5px solid black;
+    background-color: white;
+    max-width: 250px;
+    min-width: 200px;
+    padding: 15px;
+    margin-left: 20px;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+    z-index: 4;
+}
+
+.edit-event-box {
+    padding: 10px;
+}
+
+.edit-gift-box {
+    padding: 10px;
+}
+
+.edit-button {
+    color: black;
+}
+
+#schedule-event {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#edit-schedule-event {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn::after {
+    color: white;
+}
+
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, var(--color1), var(--color3), var(--color2), var(--color4));
+    box-shadow: 0 4px 15px 0 var(--color3RGBA);
+}
+
+.ui-dialog-titlebar-close {
+    visibility: visible;
+}
+
+.modalButtonClass {
+    width: 300px;
+}
+
+#confirmation-message,
+#congrats-message {
+    background-color: white;
+    border-radius: 5px;
+    border: var(--color4);
+    border-style: solid;
+    text-align: center;
+    visibility: hidden;
+}
+
+form,
+input[type="text"],
+textarea {
+    min-width: 100% !important;
+}
+
+.aboutText {
+    text-indent: 5%;
+}
+
+
+/* Accordion function up to line 448 */
+
+#accordion h5 {
+    background-color: rgba(116, 79, 168, 0.75);
+}
+
+#accordion2 h5 {
+    background-color: rgba(116, 79, 168, 0.75);
+    display: flex;
+    justify-content: center;
+}
+
+#accordion2 ul {
+    text-align: center;
+}
+
+#accordion2 ul li,
+#accordion ul li {
+    list-style: none;
+}
+
+.edit-button {
+    color: #555;
+}
+
+.ui-accordion-content {
+    min-height: 177px;
+}
+
+
+/* Message box */
+
+#message-box,
+#message-box2 {
+    width: 100%;
+    max-width: 100%;
+    border-style: solid;
+    margin-bottom: 30px;
+    border-color: rgb(225, 224, 224);
+    border-radius: 3px
+}
